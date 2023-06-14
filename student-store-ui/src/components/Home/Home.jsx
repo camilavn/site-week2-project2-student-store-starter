@@ -4,6 +4,7 @@ import "./Home.css";
 export default function Home({ products }) {
   return (
     <div className="home">
+      <div className="product-container">
       {products?.map((product) => {
         return (
           <div className="product">
@@ -16,6 +17,7 @@ export default function Home({ products }) {
           </div>
         );
       })}
+      </div>
     </div>
   );
 }
