@@ -5,7 +5,7 @@ import { Outlet } from "react-router-dom"
 import { useParams } from "react-router-dom"
 import ProductCard from "./ProductCard"
 
-export default function ProductDetail(product) {
+export default function ProductDetail({ product }) {
 
     return (
         <>

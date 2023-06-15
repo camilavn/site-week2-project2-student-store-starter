@@ -6,12 +6,11 @@ import { Outlet } from "react-router-dom"
 export default function Logo() {
     return (
         <>
-        {/* <Link to="/"> */}
-            {/* <Home/> */}
             <div className="logo" id="logo">
-            <img src="https://images.template.net/99909/free-acid-smiley-clipart-prr0m.jpg" alt="logo"/>  
+            <Link to="/"> 
+            <img src="https://images.template.net/99909/free-acid-smiley-clipart-prr0m.jpg" alt="logo"/> 
+            </Link>   
             </div> 
-        {/* </Link> */}
         </>
     )
 
