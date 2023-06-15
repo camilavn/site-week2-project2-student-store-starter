@@ -2,11 +2,15 @@ import * as React from "react"
 import { useEffect, useState } from "react"
 import axios from "axios"
 
-import { BrowserRouter, Routes } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Navbar from "../Navbar/Navbar"
 import Sidebar from "../Sidebar/Sidebar"
 import Home from "../Home/Home"
 import "./App.css"
+import Logo from "../Home/Logo"
+import Hero from "../Home/Hero"
+import ProductDetail from "../Home/ProductDetail"
+
 
 
 
@@ -21,21 +25,17 @@ export default function App() {
       })
   }, [])
 
+
   return (
     <div className="app">
-      {/* <BrowserRouter>
+      <BrowserRouter>
       <Routes>
-      <Route path="/" element={<Navbar/>}/> 
-        <Route path="" element={<Home/>}/> 
-        <Route path="/about" element={<About/>}/>  */}
-        <main>
-          {/* YOUR CODE HERE! */}
-          <Navbar />
-          <Sidebar />
-          <Home products={products}/>
-        </main>
-        {/* </Routes>
-      </BrowserRouter> */}
+        <Route path="" element={<Navbar/>}> 
+          <Route path="" element={<Home products={products}/>}/>
+          <Route path="products/:id" element={<ProductDetail />} />
+        </Route>
+      </Routes>
+      </BrowserRouter>
     </div>
   )
 }
