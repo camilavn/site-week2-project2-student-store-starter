@@ -8,7 +8,10 @@ export default function ProductCard({ product }) {
     
     return (
         <>
-        <div className="product-card">
+        <div className="product-card" style={{
+            border: '1px solid black',
+            margin: '10px',
+        }}>
         <img src={product.image} alt={product.name}></img>
             <p>{product.name}</p>
             <p>{product.price}</p>

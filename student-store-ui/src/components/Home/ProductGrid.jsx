@@ -13,7 +13,7 @@ export default function ProductGrid({products}) {
             minHeight: '20vh',
             display: 'flex',
             flexWrap: 'wrap',
-            marginTop: '5px'
+            marginTop: '5px',
         }}>
             {products?.map((product) => {
              return < ProductCard key={product.id} product={product} />})}
