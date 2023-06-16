@@ -39,3 +39,11 @@ img {
   justify-content: space-evenly;
 }
 
+#about {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-style: solid;
+}
+
+

@@ -12,7 +12,7 @@ export default function Home({ products }) {
   const [search, setSearch] = useState();
   const [category, setCategory] = useState();
 
-  console.log(products);
+  // console.log(products);
 
   const categories = [
     "All Categories",
@@ -30,21 +30,30 @@ export default function Home({ products }) {
 
   });
 
+  // function search(e) {
+  //   // setSearch(e.target.value);
+  //   e.preventDefault();
+  // }
+
   return (
     <>
       <div className="home">
         <Hero />
         <Logo />
+        <form>
         <input type="text" placeholder="Search" onChange={(e) => setSearch(e.target.value)} value={search}/>
+        </form>
         <ProductGrid products={products} />
-        <div className="About">
+        <div className="About" id="about">
           <h1> About </h1>
           <p>The codepath student store offers great products at great prices from a great team and for a great cause.</p>
         </div>
-        <footer>
-          {" "}
-          <p> footer </p>{" "}
-        </footer>
+          <div className="Footer">
+          <footer class="footer">
+          {"Contact Area"}
+          <p> footer </p>
+          </footer>
+          </div>
       </div>
     </>
   );

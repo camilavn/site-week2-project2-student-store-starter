@@ -3,12 +3,19 @@ import {Link} from "react-router-dom"
 import Home from "./Home"
 import { Outlet } from "react-router-dom"
 import ProductDetail from "./ProductDetail"
+import { useParams } from "react-router-dom"
+import { useState } from "react"
 
 export default function ProductCard({ product }) {
     
+    
     return (
         <>
-        <div className="product-card" style={{
+        
+
+
+       <Link to={"products/" + product.id} key={product.id}>
+       <div className="product-card" style={{
             border: '1px solid black',
             margin: '10px',
         }}>
@@ -16,8 +23,9 @@ export default function ProductCard({ product }) {
             <p>{product.name}</p>
             <p>{product.price}</p>
         </div>
-
+       </Link>
         
+
         </>
     )
 
