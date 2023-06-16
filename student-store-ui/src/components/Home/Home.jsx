@@ -45,18 +45,24 @@ export default function Home({ products }) {
         <form className="searchBar">
         <input type="text" placeholder="Search" onChange={(e) => setSearch(e.target.value)} value={search}/>
         </form>
+        {/* <div className="CategoriesBar">
+          categories.map((category, index) => ( 
+          <button> key={index} onClick{() => setCategory(category)}> {category} </button>
+          )
+        </div> */}
         <ProductGrid products={products} filtered={filtered}/>
-        <div className="About" id="about">
-          <h1> About </h1>
-          <p>The codepath student store offers great products at great prices from a great team and for a great cause.</p>
-        </div>
-      <div className="Footer">
-        <footer className="footer">
-        {"Contact Area"}
-        <p> footer </p>
-        </footer>
+        <div className="BottomArea">
+          <div className="About" id="about">
+            <h1> About </h1>
+            <p>The codepath student store offers great products at great prices from a great team and for a great cause.</p>
+          </div>
+          <div className="Footer">
+            <h1> Footer </h1>
+          </div>
       </div>
+
       </div>
+
     </>
   );
 }

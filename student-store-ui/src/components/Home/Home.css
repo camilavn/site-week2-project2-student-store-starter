@@ -41,6 +41,15 @@ img {
 }
 
 .About {
+  display: flex;
+  border-style: solid;
+  margin-left: 0%;
+  margin-right: 0%;
+  max-width: fit-content;
+}
+
+.Footer {
+  display: flex;
   border-style: solid;
   margin-left: 0%;
   margin-right: 0%;
@@ -49,5 +58,10 @@ img {
 
 .searchBar {
   margin-top: 20 px;
+}
+
+.BottomArea {
+  display: flex;
+  flex-direction: column;
 }
 

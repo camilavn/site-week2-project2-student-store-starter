@@ -11,8 +11,6 @@ export default function ProductCard({ product }) {
     
     return (
         <>
-        
-
 
        <Link to={"products/" + product.id} key={product.id}>
         <div className="product-card" style={{
@@ -21,7 +19,10 @@ export default function ProductCard({ product }) {
             }}>
             <img src={product.image} alt={product.name}></img>
                 <p>{product.name}</p>
-                <p>{product.price}</p>
+                <p>{product.price.toLocaleString("us-EN", {
+          style: "currency",
+          currency: "USD",
+ })}</p>
             </div>
        </Link>
         
