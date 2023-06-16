@@ -4,7 +4,7 @@ import Home from "./Home"
 import { Outlet } from "react-router-dom"
 import ProductCard from "./ProductCard"
 
-export default function ProductGrid({products}) {
+export default function ProductGrid({products, filtered}) {
 
     return (
         <>
@@ -15,7 +15,7 @@ export default function ProductGrid({products}) {
             flexWrap: 'wrap',
             marginTop: '5px',
         }}>
-            {products?.map((product) => {
+            {filtered?.map((product) => {
              return < ProductCard key={product.id} product={product} />})}
         </div>
         </>

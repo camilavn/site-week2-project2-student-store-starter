@@ -34,6 +34,7 @@ export default function App() {
           <Route path="" element={<Home products={products}/>}/>
           <Route path="products/:id" element={<ProductDetail />} />
         </Route>
+        <Route path="*" element={<h1>Not Found</h1>} />
       </Routes>
       </BrowserRouter>
     </div>

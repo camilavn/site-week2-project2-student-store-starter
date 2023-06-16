@@ -6,7 +6,9 @@ import Logo from "../../components/Home/Logo"
 export default function Navbar() {
   return (
     <>
-    <nav className="navbar"></nav>
+    <nav className="navbar" id="navbar">
+      <a href="/"> Home </a>
+    </nav>
     <Outlet />
     </>
   )

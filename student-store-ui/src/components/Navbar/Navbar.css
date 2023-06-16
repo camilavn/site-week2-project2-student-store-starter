@@ -1,3 +1,7 @@
 .navbar {
-    align-items: top;
+    background-color: #add8e6;
+    text-decoration: none;
+    position: fixed;
+    width: 100%;
+    height: 5vh;
 }

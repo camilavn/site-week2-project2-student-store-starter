@@ -15,14 +15,14 @@ export default function ProductCard({ product }) {
 
 
        <Link to={"products/" + product.id} key={product.id}>
-       <div className="product-card" style={{
-            border: '1px solid black',
-            margin: '10px',
-        }}>
-        <img src={product.image} alt={product.name}></img>
-            <p>{product.name}</p>
-            <p>{product.price}</p>
-        </div>
+        <div className="product-card" style={{
+                border: '1px solid black',
+                margin: '10px',
+            }}>
+            <img src={product.image} alt={product.name}></img>
+                <p>{product.name}</p>
+                <p>{product.price}</p>
+            </div>
        </Link>
         
 
