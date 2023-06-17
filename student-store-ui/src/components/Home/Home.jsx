@@ -50,7 +50,7 @@ export default function Home({ products }) {
         </form>
         <div className="CategoriesBar">
         {categories.map((category, index) => ( 
-         <button key={index} onClick={() => setCategory(category)}> {category} </button>))};
+         <button key={index} onClick={() => setCategory(category)}> {category} </button>))}
         </div>
         <ProductGrid products={products} filtered={filtered} />
         <div className="BottomArea">
