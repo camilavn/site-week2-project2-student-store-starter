@@ -14,11 +14,17 @@ Check out our [deployed Student Store](https://codepath-student-store-demo.surge
 
 ### Core Features
 
-- [ ] The website displays header, banner, search, product grid, about, contact, and footer section.
-- [ ] The website displays the products at the [GET /store endpoint](https://codepath-store-api.herokuapp.com/store) on initial page load.
-- [ ] Users can click on a category (clothing, food, etc.) to filter the product grid by type.
-- [ ] Users can search for products.
-- [ ] User can click on a product in the grid to navigate to a new page containing additional product details.
+- [x] The website displays header, banner, search, product grid, about, contact, and footer section.
+- [x] The website displays the products at the [GET /store endpoint](https://codepath-store-api.herokuapp.com/store) on initial page load.
+- [x] Users can click on a category (clothing, food, etc.) to filter the product grid by type.
+- [x] Users can search for products.
+- [x] User can click on a product in the grid to navigate to a new page containing additional product details.
+
+<div style="position: relative; padding-bottom: 61.120543293718164%; height: 0;"><iframe src="https://www.loom.com/embed/110dc8129b8548b6bd1c55d177fe1029?sid=9dbdeff9-56cf-4bd8-a8bb-4bab2a13089b" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
+Project 2 Pt 1- 16 June 2023 - Watch Video
+
+https://www.loom.com/share/110dc8129b8548b6bd1c55d177fe1029?sid=be174cd8-7b7d-4909-8e0c-24289040b341
 
 ### Stretch Features
 
