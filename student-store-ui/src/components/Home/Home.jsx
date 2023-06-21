@@ -61,8 +61,12 @@ export default function Home({ products }) {
               from a great team and for a great cause.
             </p>
           </div>
-          <div className="Footer">
+          <div className="Footer" id="footer">
+            <footer>
             <h1> Footer </h1>
+            <p> We've searched far and wide for items that perk the interests of even the most eccentric students
+            and decided to offer them all here in one place. </p>
+            </footer>
           </div>
         </div>
       </div>

@@ -25,6 +25,19 @@ export default function ProductCard({ product }) {
               currency: "USD",
             })}
           </p>
+          <form onSubmit={
+            (event) => {
+              product.quantity = event.target.quantity.value;
+              console.log(product);
+          }}><button type="submit"> + </button>
+        
+          </form>
+          <form onSubmit={
+            (event) => {
+              product.quantity = event.target.quantity.value;
+              console.log(product);
+          }}><button type="submit"> - </button>
+          </form>
         </div>
       </Link>
     </>

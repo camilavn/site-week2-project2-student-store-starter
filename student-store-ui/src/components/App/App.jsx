@@ -16,12 +16,14 @@ import ProductDetail from "../Home/ProductDetail"
 
 export default function App() {
 
-  const backendURL = "https://codepath-store-api.herokuapp.com/store"
   const [products, setProducts] = useState();
 
   useEffect(() => {
-      axios.get(backendURL).then((response) => {
+      axios.get(`http://localhost:3001/`).then((response) => {
           setProducts(response.data.products)
+      })
+      .catch((error) => {
+        console.log(error);
       })
   }, [])
 

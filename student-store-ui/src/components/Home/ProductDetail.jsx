@@ -11,7 +11,7 @@ import { useEffect } from "react";
 export default function ProductDetail() {
   const params = useParams();
 
-  const backendURL = `https://codepath-store-api.herokuapp.com/store/${params.id}`;
+  const backendURL = `http://localhost::3001/${params.id}`;
   const [product, setProduct] = useState([]);
 
   useEffect(() => {

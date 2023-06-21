@@ -7,7 +7,7 @@ export default function Hero() {
         <>
         <div className="hero"> 
         <div className="content" id="content">
-        <h1> Welcome! </h1>
+        <h1> Welcome to Camila's Student Store! </h1>
         </div>
         </div>
         </>

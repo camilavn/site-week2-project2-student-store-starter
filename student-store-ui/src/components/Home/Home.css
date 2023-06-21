@@ -65,3 +65,8 @@ img {
   flex-direction: column;
 }
 
+.CategoriesBar {
+  float: center;
+  display: flex;
+  flex-direction: column;
+}
