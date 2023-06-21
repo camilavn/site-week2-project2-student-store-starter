@@ -8,8 +8,9 @@ import ProductView from "./ProductView";
 import Logo from "./Logo";
 import { useState } from "react";
 import Navbar from "../Navbar/Navbar";
+import Sidebar from "../Sidebar/Sidebar";
 
-export default function Home({ products }) {
+export default function Home({ shoppingList, setShoppingList, products }) {
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState("All Categories");
 
@@ -37,6 +38,9 @@ export default function Home({ products }) {
 
   return (
     <>
+    <div className="sideBar">
+      <Sidebar shoppingList={shoppingList}/>
+    </div>
       <div className="home">
         <Hero />
         <Logo />
@@ -52,7 +56,7 @@ export default function Home({ products }) {
         {categories.map((category, index) => ( 
          <button key={index} onClick={() => setCategory(category)}> {category} </button>))}
         </div>
-        <ProductGrid products={products} filtered={filtered} />
+        <ProductGrid products={products} filtered={filtered} shoppingList={shoppingList} setShoppingList={setShoppingList}/>
         <div className="BottomArea">
           <div className="About" id="about">
             <h1> About </h1>

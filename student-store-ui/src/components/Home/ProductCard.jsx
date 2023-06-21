@@ -6,7 +6,14 @@ import ProductDetail from "./ProductDetail";
 import { useParams } from "react-router-dom";
 import { useState } from "react";
 
-export default function ProductCard({ product }) {
+export default function ProductCard({shoppingList, setShoppingList, product }) {
+
+  function addItems(product) {
+    
+
+  }
+
+
   return (
     <>
       <Link to={"products/" + product.id} key={product.id}>
@@ -25,19 +32,9 @@ export default function ProductCard({ product }) {
               currency: "USD",
             })}
           </p>
-          <form onSubmit={
-            (event) => {
-              product.quantity = event.target.quantity.value;
-              console.log(product);
-          }}><button type="submit"> + </button>
-        
-          </form>
-          <form onSubmit={
-            (event) => {
-              product.quantity = event.target.quantity.value;
-              console.log(product);
-          }}><button type="submit"> - </button>
-          </form>
+          <button type="submit" onClick={product.addItems} > + </button>
+          <button type="submit" onClick={product.deleteItems} > - </button>
+          
         </div>
       </Link>
     </>

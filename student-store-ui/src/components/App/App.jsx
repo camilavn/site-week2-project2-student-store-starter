@@ -17,6 +17,7 @@ import ProductDetail from "../Home/ProductDetail"
 export default function App() {
 
   const [products, setProducts] = useState();
+  const [shoppingList, setShoppingList] = useState([]);
 
   useEffect(() => {
       axios.get(`http://localhost:3001/`).then((response) => {
@@ -33,7 +34,7 @@ export default function App() {
       <BrowserRouter>
       <Routes>
         <Route path="" element={<Navbar/>}> 
-          <Route path="" element={<Home products={products}/>}/>
+          <Route path="" element={<Home products={products} shoppingList={shoppingList} setShoppingList={setShoppingList}/>}/>
           <Route path="products/:id" element={<ProductDetail />} />
         </Route>
         <Route path="*" element={<h1>Not Found</h1>} />

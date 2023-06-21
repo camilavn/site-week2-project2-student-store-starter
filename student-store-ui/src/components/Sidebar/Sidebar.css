@@ -1,0 +1,11 @@
+.sideBar{
+    background-color: #00538C;
+}
+
+.sidebarclosed {
+    width: 10px;
+}
+
+.sidebaropen {
+    width: 500px;
+}

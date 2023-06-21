@@ -4,7 +4,7 @@ import Home from "./Home"
 import { Outlet } from "react-router-dom"
 import ProductCard from "./ProductCard"
 
-export default function ProductGrid({products, filtered}) {
+export default function ProductGrid({shoppingList, setShoppingList, products, filtered}) {
 
     return (
         <>

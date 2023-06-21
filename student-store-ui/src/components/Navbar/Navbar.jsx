@@ -11,10 +11,10 @@ export default function Navbar() {
       <a href="/"> Home </a>
       </div>
       <div className="aboutTab" id="aboutTab">
-      <a href="/"> About </a>
+      <a href="#about"> About </a>
       </div>
       <div className="footerTab" id="footerTab">
-      <a href="/"> Footer </a>
+      <a href="#footer"> Footer </a>
       </div>
     </nav>
     <Outlet />
