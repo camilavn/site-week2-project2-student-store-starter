@@ -9,7 +9,11 @@ import { useState } from "react";
 export default function ProductCard({shoppingList, setShoppingList, product }) {
 
   function addItems(product) {
-    
+    const existingProd = 
+
+  }
+
+  function deleteItems(product) {
 
   }
 
@@ -33,8 +37,7 @@ export default function ProductCard({shoppingList, setShoppingList, product }) {
             })}
           </p>
           <button type="submit" onClick={product.addItems} > + </button>
-          <button type="submit" onClick={product.deleteItems} > - </button>
-          
+          <button type="submit" onClick={product.deleteItems} > - </button>       
         </div>
       </Link>
     </>
