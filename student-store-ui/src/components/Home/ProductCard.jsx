@@ -9,12 +9,41 @@ import { useState } from "react";
 export default function ProductCard({shoppingList, setShoppingList, product }) {
 
   function addItems(product) {
-    const existingProd = 
-
+    const existingProd = shoppingList?.find((item) => item.id === product.id);
+    if (existingProd) {
+      const updatedProd = shoppingList.map((item) => {
+        if (item.id === product.id) {
+          return {
+            ...item,
+            quantity: item.quantity + 1,
+          };
+        }
+        return item;
+      })
+      setShoppingList(updatedProd);
+    } else {
+      setShoppingList([...shoppingList, { ...product, quantity: 1 }]);
+    }
+      //console.log(shoppingList);
   }
 
   function deleteItems(product) {
-
+    const existingProd = shoppingList?.find((item) => item.id === product.id);
+    if (existingProd) {
+      const updatedProd = shoppingList.map((item) => {
+        if (item.id === product.id) {
+          return {
+            ...item,
+            quantity: item.quantity - 1,
+          };
+        }
+        return item;
+      })
+      setShoppingList(updatedProd);
+    } else {
+      setShoppingList([...shoppingList, { ...product, quantity: 1 }]);
+    }
+      //console.log(shoppingList);
   }
 
 
@@ -26,8 +55,7 @@ export default function ProductCard({shoppingList, setShoppingList, product }) {
           style={{
             border: "1px solid black",
             margin: "10px",
-          }}
-        >
+          }}>
           <img src={product.image} alt={product.name}></img>
           <p>{product.name}</p>
           <p>
