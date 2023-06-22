@@ -16,7 +16,7 @@ export default function ProductGrid({shoppingList, setShoppingList, products, fi
             marginTop: '5px',
         }}>
             {filtered?.map((product) => {
-             return < ProductCard key={product.id} product={product} />})}
+             return < ProductCard key={product.id} product={product} shoppingList={shoppingList} setShoppingList={setShoppingList} />})}
         </div>
         </>
     )

@@ -16,4 +16,4 @@ getProdID = (id) => {
 module.exports = {
     getProd,
     getProdID
-}
+};

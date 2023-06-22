@@ -11,13 +11,14 @@ router.get('/products', (req, res) => {
 
 router.get('/products/:id', (req, res) => {
   const productId = req.params.id;
-  const product = db.products.find((p) => p.id == productId);
+  const product = db.products.find((p) => p.id === productId);
 
   if (!product) {
     return res.status(404).json({ error: 'Product not found' });
   }
 
   res.json(product);
+
 });
 
 module.exports = router;

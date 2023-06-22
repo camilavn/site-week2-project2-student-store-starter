@@ -5,28 +5,33 @@ import ShoppingCart from "../Shopping Cart/ShoppingCart";
 import { useState } from "react";
 
 export default function Sidebar() {
+
   const [isOpen, setIsOpen] = useState(null);
-  const toggle = () => setIsOpen(!isOpen);
 
 
   return (
+
     <section className="sidebar">
-      { !isOpen ? (
-        <section class="sidebarclosed">
-          <div class="wrapper">
-            <button class="toggle-button button closed" onClick={!toggle}>
-              <i class="material-icons md-48">arrow_forward</i>
+      <button className="toggle-button button closed">
+              <i className="material-icons md-48">arrow_forward</i>
             </button>
-            <div class="shopping-cart">
-              <div class="cart-icons">
-                <span class="cart-icon icon button">
-                  <i class="material-icons md-48">add_shopping_cart</i>
+
+      { !isOpen ? (
+        <section className="sidebarclosed">
+          <div className="wrapper">
+            <button onClick={() =>{setIsOpen(!isOpen)}} className="toggle-button button closed">
+              <i className="material-icons md-48">arrow_forward</i>
+            </button>
+            <div className="shopping-cart">
+              <div className="cart-icons">
+                <span className="cart-icon icon button">
+                  <i className="material-icons md-48">add_shopping_cart</i>
                 </span>
-                <span class="cart-icon icon button">
-                  <i class="material-icons md-48">monetization_on</i>
+                <span className="cart-icon icon button">
+                  <i className="material-icons md-48">monetization_on</i>
                 </span>
-                <span class="cart-icon icon button">
-                  <i class="material-icons md-48">fact_check</i>
+                <span className="cart-icon icon button">
+                  <i className="material-icons md-48">fact_check</i>
                 </span>
               </div>
             </div>
@@ -35,58 +40,56 @@ export default function Sidebar() {
       )
       :
       (
-        <section class="sidebaropen">
-          <div class="wrapper">
-            <button class="toggle-button button open" onClick={toggle}>
-              <i class="material-icons md-48">arrow_forward</i>
+        <section className="sidebaropen">
+          <div className="wrapper">
+            <button className="toggle-button button open" onClick={() =>{setIsOpen(!isOpen)}}>
+              <i className="material-icons md-48">arrow_forward</i>
             </button>
-            <div class="shopping-cart">
-              <div class="open">
-                <h3 class="">
+            <div className="shopping-cart">
+              <div className="open">
+                <h3 className="">
                   Shopping Cart{" "}
-                  <span class="button">
-                    <i class="material-icons md-48">add_shopping_cart</i>
+                  <ShoppingCart />
+                  <span className="button">
+                    <i className="material-icons md-48">add_shopping_cart</i>
                   </span>
                 </h3>
-                <div class="notification">
-                  No items added to cart yet. Start shopping now!
-                </div>
-                <div class="checkout-form">
-                  <h3 class="">
+                <div className="checkout-form">
+                  <h3 className="">
                     Payment Info{" "}
-                    <span class="button">
-                      <i class="material-icons md-48">monetization_on</i>
+                    <span className="button">
+                      <i className="material-icons md-48">monetization_on</i>
                     </span>
                   </h3>
-                  <div class="input-field">
-                    <label class="label">Name</label>
-                    <div class="control ">
+                  <div className="input-field">
+                    <label className="label">Name</label>
+                    <div className="control ">
                       <input
                         name="name"
-                        class="checkout-form-input"
+                        className="checkout-form-input"
                         type="text"
                         placeholder="Student Name"
                         value=""
                       ></input>
                     </div>
                   </div>
-                  <div class="input-field">
-                    <label class="label">Email</label>
-                    <div class="control">
+                  <div className="input-field">
+                    <label className="label">Email</label>
+                    <div className="control">
                       <input
                         name="email"
-                        class="checkout-form-input"
+                        className="checkout-form-input"
                         type="email"
                         placeholder="student@codepath.org"
                         value=""
                       ></input>
                     </div>
                   </div>
-                  <div class="field">
-                    <div class="control">
-                      <label class="checkbox">
+                  {/* <div className="field">
+                    <div className="control">
+                      <label className="checkbox">
                         <input name="termsAndConditions" type="checkbox">
-                          <span class="label">
+                          <span className="label">
                             I agree to the{" "}
                             <a href="#terms-and-conditions">
                               terms and conditions
@@ -95,22 +98,22 @@ export default function Sidebar() {
                         </input>
                       </label>
                     </div>
-                  </div>
-                  <p class="is-danger"></p>
-                  <div class="field">
-                    <div class="control">
-                      <button class="button checkout-button">Checkout</button>
+                  </div> */}
+                  <p className="is-danger"></p>
+                  <div className="field">
+                    <div className="control">
+                      <button className="button checkout-button">Checkout</button>
                     </div>
                   </div>
                 </div>
-                <div class="checkout-success">
+                <div className="checkout-success">
                   <h3>
                     Checkout Info{" "}
-                    <span class="icon button">
-                      <i class="material-icons md-48">fact_check</i>
+                    <span className="icon button">
+                      <i className="material-icons md-48">fact_check</i>
                     </span>
                   </h3>
-                  <div class="content">
+                  <div className="content">
                     <p>
                       A confirmation email will be sent to you so that you can
                       confirm this order. Once you have confirmed theorder, it
@@ -123,9 +126,6 @@ export default function Sidebar() {
           </div>
         </section>
       )}
-      <div className="shoppingCart">
-        <ShoppingCart />
-      </div>
     </section>
   );
 }
