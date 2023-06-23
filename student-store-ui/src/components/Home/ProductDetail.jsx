@@ -11,13 +11,13 @@ import { useEffect } from "react";
 export default function ProductDetail() {
   const params = useParams();
   
-  const backendURL = `http://localhost:3001/${params.id}`;
+  const backendURL = `http://localhost:3001/products/${params.id}`;
   const [product, setProduct] = useState([]);
 
   useEffect(() => {
     axios.get(backendURL).then((response) => {
       console.log(response);
-      setProduct(response.data.product);
+      setProduct(response.data);
     });
   }, []);
 

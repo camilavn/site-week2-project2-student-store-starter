@@ -16,8 +16,15 @@ import ProductDetail from "../Home/ProductDetail"
 
 export default function App() {
 
+  const initialCheckoutForm = {
+    email: '',
+    name: ''
+  };
+
   const [products, setProducts] = useState();
   const [shoppingList, setShoppingList] = useState([]);
+  const [checkoutForm, setCheckoutForm] = useState(initialCheckoutForm);
+
 
   useEffect(() => {
       axios.get(`http://localhost:3001/`).then((response) => {
@@ -28,13 +35,38 @@ export default function App() {
       })
   }, [])
 
+  const handleOnCheckoutFormChange = (e) => {
+    const { name, value } = e.target;
+    setCheckoutForm((prevForm) => ({
+      ...prevForm,
+      [name]: value,
+    }));
+  };
+
+  const handleOnSubmitCheckoutForm = () => {
+    fetch("/api/submit-order", {
+      method: "POST",
+      body: JSON.stringify(checkoutForm),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        //update the state or perform any other actions here
+      })
+      .catch((error) => {
+        // Handle the error
+        console.error("Error submitting the order:", error);
+      });
+  };
+
 
   return (
     <div className="app">
       <BrowserRouter>
       <Routes>
         <Route path="" element={<Navbar/>}> 
-          <Route path="" element={<Home products={products} shoppingList={shoppingList} setShoppingList={setShoppingList}/>}/>
+          <Route path="" element={<Home products={products} shoppingList={shoppingList} setShoppingList={setShoppingList} 
+          checkoutForm={checkoutForm} setCheckoutForm={setCheckoutForm} handleOnCheckoutFormChange={handleOnCheckoutFormChange} 
+          handleOnSubmitCheckoutForm={handleOnSubmitCheckoutForm}/>}/>
           <Route path="products/:id" element={<ProductDetail />} />
         </Route>
         <Route path="*" element={<h1>Not Found</h1>} />

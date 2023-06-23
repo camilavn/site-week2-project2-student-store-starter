@@ -10,7 +10,7 @@ import { useState } from "react";
 import Navbar from "../Navbar/Navbar";
 import Sidebar from "../Sidebar/Sidebar";
 
-export default function Home({ shoppingList, setShoppingList, products }) {
+export default function Home({ shoppingList, setShoppingList, products, checkoutForm, setCheckoutForm, handleOnCheckoutFormChange, handleOnSubmitCheckoutForm }) {
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState("All Categories");
 
@@ -39,7 +39,7 @@ export default function Home({ shoppingList, setShoppingList, products }) {
   return (
     <>
     <div className="sideBar">
-      <Sidebar shoppingList={shoppingList}/>
+      <Sidebar shoppingList={shoppingList} checkoutForm={checkoutForm} setCheckoutForm={setCheckoutForm} handleOnCheckoutFormChange={handleOnCheckoutFormChange} handleOnSubmitCheckoutForm={handleOnSubmitCheckoutForm}/>
     </div>
       <div className="home">
         <Hero />

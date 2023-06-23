@@ -24,6 +24,7 @@ export default function ProductCard({shoppingList, setShoppingList, product }) {
     } else {
       setShoppingList([...shoppingList, { ...product, quantity: 1 }]);
     }
+    // console.log(shoppingList);
   }
 
   function deleteItems(product) {
@@ -40,9 +41,9 @@ export default function ProductCard({shoppingList, setShoppingList, product }) {
       })
       setShoppingList(updatedProd);
     } else {
-      setShoppingList([...shoppingList, { ...product, quantity: 0 }]);
+      setShoppingList([...shoppingList, { ...product, quantity: 1 }]);
     }
-      console.log(shoppingList);
+      // console.log(shoppingList);
   }
 
 
