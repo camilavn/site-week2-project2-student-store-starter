@@ -61,7 +61,7 @@ export default function Sidebar(
             <div className="shopping-cart">
               <div className="open">
                 <h3 className="">
-                  Shopping Cart <ShoppingCart  shoppingList={shoppingList} products={products}/>
+                  Shopping Cart <ShoppingCart  shoppingList={shoppingList}/>
                   <span className="button">
                     <i className="material-icons md-48">add_shopping_cart</i>
                   </span>
@@ -124,9 +124,9 @@ export default function Sidebar(
               </div>
               <p className="is-danger"></p>
               <div className="field">
-                <div className="control">
+                {/* <div className="control">
                   <button className="button checkout-button">Checkout</button>
-                </div>
+                </div> */}
               </div>
             </div>
             <div className="checkout-success">

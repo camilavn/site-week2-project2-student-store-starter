@@ -5,9 +5,14 @@ import { useParams } from "react-router-dom";
 import "./CheckoutForm.css";
 import Sidebar from "./Sidebar";
 
-export default function CheckoutForm({ shoppingList, isOpen, checkoutForm, setCheckoutForm, handleOnSubmitCheckoutForm, handleOnCheckoutFormChange }) {
+export default function CheckoutForm({ shoppingList, isOpen, checkoutForm, setCheckoutForm, handleOnSubmitCheckoutForm, handleOnCheckoutFormChange, products}) {
     
   const { email, name } = checkoutForm;
+
+  function checkout(e) {
+    e.preventDefault();
+    setCheckoutForm({ email: "", name: "" });
+  }
   
     return (
       <div className={`checkout-form ${isOpen ? 'open' : 'closed'}`}>
@@ -28,7 +33,7 @@ export default function CheckoutForm({ shoppingList, isOpen, checkoutForm, setCh
             value={name}
             onChange={handleOnCheckoutFormChange}
           />
-          <button type="submit" className="checkout-button">
+          <button type="submit" className="checkout-button" onClick={checkout}>
             Checkout
           </button>
         </form>
