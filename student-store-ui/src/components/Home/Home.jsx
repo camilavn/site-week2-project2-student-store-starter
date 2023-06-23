@@ -39,7 +39,7 @@ export default function Home({ shoppingList, setShoppingList, products, checkout
   return (
     <>
     <div className="sideBar">
-      <Sidebar shoppingList={shoppingList} checkoutForm={checkoutForm} setCheckoutForm={setCheckoutForm} handleOnCheckoutFormChange={handleOnCheckoutFormChange} handleOnSubmitCheckoutForm={handleOnSubmitCheckoutForm}/>
+      <Sidebar shoppingList={shoppingList} checkoutForm={checkoutForm} setCheckoutForm={setCheckoutForm} handleOnCheckoutFormChange={handleOnCheckoutFormChange} handleOnSubmitCheckoutForm={handleOnSubmitCheckoutForm} products={products}/>
     </div>
       <div className="home">
         <Hero />

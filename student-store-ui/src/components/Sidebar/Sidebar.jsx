@@ -142,8 +142,6 @@ export default function Sidebar(
               </div>
             </div>
           </div>
-          {/* </div>
-          </div> */}
         </section>
       )}
     </section>

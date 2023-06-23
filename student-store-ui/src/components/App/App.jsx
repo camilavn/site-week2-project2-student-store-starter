@@ -23,7 +23,7 @@ export default function App() {
 
   const [products, setProducts] = useState();
   const [shoppingList, setShoppingList] = useState([]);
-  const [checkoutForm, setCheckoutForm] = useState(initialCheckoutForm);
+  const [checkoutForm, setCheckoutForm] = useState({email: "", name: ""});
 
 
   useEffect(() => {
