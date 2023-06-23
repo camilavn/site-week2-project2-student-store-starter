@@ -124,9 +124,6 @@ export default function Sidebar(
               </div>
               <p className="is-danger"></p>
               <div className="field">
-                {/* <div className="control">
-                  <button className="button checkout-button">Checkout</button>
-                </div> */}
               </div>
             </div>
             <div className="checkout-success">

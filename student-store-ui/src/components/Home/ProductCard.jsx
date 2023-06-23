@@ -39,10 +39,11 @@ export default function ProductCard({shoppingList, setShoppingList, product }) {
         }
         return item;
       })
-      setShoppingList(updatedProd);
-    } else {
-      setShoppingList([...shoppingList, { ...product, quantity: 1 }]);
-    }
+
+      const filteredProds = updatedProd.filter((item) => item.quantity > 0);
+      setShoppingList(filteredProds);
+
+    } 
       console.log(shoppingList);
   }
 

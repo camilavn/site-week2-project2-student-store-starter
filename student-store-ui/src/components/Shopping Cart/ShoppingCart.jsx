@@ -2,8 +2,6 @@ import Home from "../Home/Home";
 import "./ShoppingCart.css";
 
 
-
-
 export default function ShoppingCart({ shoppingList }) {
 
   const subTotal = shoppingList.reduce((acc, item) => acc + item.price * item.quantity, 0);
@@ -27,7 +25,7 @@ export default function ShoppingCart({ shoppingList }) {
           );
         })
       )}
-      <section classname="shoppingCartTotal">
+      <section className="shoppingCartTotal">
         <p>Total: {finalTotal.toFixed(2)}</p>
       </section>
     </div>
