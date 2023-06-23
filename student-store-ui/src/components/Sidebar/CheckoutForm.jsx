@@ -71,21 +71,21 @@ export default function CheckoutForm({ shoppingList, isOpen, checkoutForm, setCh
         </form>
         {shoppingList?.quantity > 0 && <p className="error">Error: Something went wrong with the checkout.</p>}
         {shoppingList?.quantity === 0 && <p className="success">Success! Your order has been placed.</p>}
-      </div>
         <section className="checkedOut">
           <h1>Receipt</h1>
           <p>Name: {checkoutForm.name}</p>
           <p>Email: {checkoutForm.email}</p>
-          {shoppingList?.map((item) => {
+          {shoppingList?.map((item) => (
             <span className="shoppingCartItem" key={item.id}>
               <p>Item name: {item.name}</p>
               <p>Item quantity: {item.quantity}</p>
               <p>Item price: {item.price.toFixed(2)}</p>
               <p>Item total: {(item.price * item.quantity).toFixed(2)}</p>
-              <p>Total: {finalTotal.toFixed(2)}</p>
+              {/* <p>Total: {finalTotal.toFixed(2)}</p> */}
             </span>
-        })}
+        ))}
         </section>
+        </div>
         </>
       )
     }
