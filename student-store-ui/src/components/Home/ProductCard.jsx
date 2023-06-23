@@ -27,7 +27,7 @@ export default function ProductCard({shoppingList, setShoppingList, product }) {
     // console.log(shoppingList);
   }
 
-  function deleteItems(product) {
+  function deleteItems(e) {
     const existingProd = shoppingList?.find((item) => item.id === product.id);
     if (existingProd) {
       const updatedProd = shoppingList.map((item) => {
@@ -43,7 +43,7 @@ export default function ProductCard({shoppingList, setShoppingList, product }) {
     } else {
       setShoppingList([...shoppingList, { ...product, quantity: 1 }]);
     }
-      // console.log(shoppingList);
+      console.log(shoppingList);
   }
 
 
