@@ -36,6 +36,8 @@ https://www.loom.com/share/110dc8129b8548b6bd1c55d177fe1029?sid=be174cd8-7b7d-49
 
 ## *Week 3* Application Features
 
+<div style="position: relative; padding-bottom: 55.46875%; height: 0;"><iframe src="https://www.loom.com/embed/78b01f3c9e784729a7138278ecdc0234?sid=b38c5028-6835-4033-8482-1d995e1eaa10" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
 ### Core Features
 
 - [x] User can click to expand the shopping cart in the left navigation.
@@ -49,4 +51,4 @@ https://www.loom.com/share/110dc8129b8548b6bd1c55d177fe1029?sid=be174cd8-7b7d-49
 - [x] Create an endpoint for fetching all orders in the database and an endpoint for serving an individual order based on its ID.
 - [ ] Build a page in the UI that displays the list of all past orders. The user should be able to click on any individual order to take them to a more detailed page of the transaction.
 - [ ] Allow users to use an input to filter orders by the email of the person who placed the order.
-- [x] Your choice! (Replace this bullet explaining what you implemented. Example: Users can create a wish list of products they are interested in but not yet ready to purchase.)
+- [x] When the user adds a product in the cart it will show on reciept but when taken out of cart before checkout it will disapear and also the name and email appear as you type on the recipt!

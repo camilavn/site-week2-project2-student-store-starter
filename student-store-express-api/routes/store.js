@@ -18,7 +18,6 @@ router.get('/products/:id', (req, res) => {
   }
 
   res.json(product);
-
 });
 
 module.exports = router;

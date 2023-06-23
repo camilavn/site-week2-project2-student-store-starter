@@ -5,15 +5,15 @@ const path = require('path');
 const db = require('../data/db.json');
 
 
-getProd = () => {
+class Store {
+  static getAllProducts() {
     return db.products;
-    }
+  }
 
-getProdID = (id) => {
-    return db.products.find((p) => p.id == id);
-    }
+  static getProductById(id) {
+    return db.products.find((p) => p.id === id);
+  }
+}
 
-module.exports = {
-    getProd,
-    getProdID
-};
+module.exports = Store;
+
