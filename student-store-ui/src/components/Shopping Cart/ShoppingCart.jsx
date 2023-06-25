@@ -21,11 +21,14 @@ export default function ShoppingCart({ shoppingList }) {
               <p>Item quantity: {item.quantity}</p>
               <p>Item price: {item.price.toFixed(2)}</p>
               <p>Item total: {(item.price * item.quantity).toFixed(2)}</p>
+              
             </span>
           );
         })
       )}
       <section className="shoppingCartTotal">
+        <p>Subtotal: {subTotal.toFixed(2)}</p>
+        <p>Tax: {taxOfProd.toFixed(2)}</p>
         <p>Total: {finalTotal.toFixed(2)}</p>
       </section>
     </div>
