@@ -36,7 +36,7 @@ https://www.loom.com/share/110dc8129b8548b6bd1c55d177fe1029?sid=be174cd8-7b7d-49
 
 ## *Week 3* Application Features
 
-<div style="position: relative; padding-bottom: 55.46875%; height: 0;"><iframe src="https://www.loom.com/embed/78b01f3c9e784729a7138278ecdc0234?sid=b38c5028-6835-4033-8482-1d995e1eaa10" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+<div style="position: relative; padding-bottom: 55.46875%; height: 0;"><iframe src="https://www.loom.com/embed/b7d442087b7547c0b010930a87501508?sid=a2b00ffb-b5b6-4b60-aca0-eafb4d87a72c" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
 ### Core Features
 

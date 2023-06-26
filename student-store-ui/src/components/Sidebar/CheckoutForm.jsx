@@ -7,15 +7,19 @@ import Sidebar from "./Sidebar";
 
 export default function CheckoutForm({ shoppingList, isOpen, checkoutForm, setCheckoutForm, handleOnSubmitCheckoutForm, handleOnCheckoutFormChange, products}) {
     
+  const [isCheckedOut, setIsCheckedOut] = useState(false);
+
   const { email, name } = checkoutForm;
   const subTotal = shoppingList.reduce((acc, item) => acc + item.price * item.quantity, 0);
   const taxRate = .08;
   const taxOfProd = subTotal * taxRate;
   const finalTotal = subTotal + taxOfProd;
 
-  function checkout(e) {
+
+  const checkout = (e) => {
     e.preventDefault();
-  }
+    setIsCheckedOut(true);
+  };
 
     if(checkoutForm === null) {
     return (
@@ -72,6 +76,8 @@ export default function CheckoutForm({ shoppingList, isOpen, checkoutForm, setCh
         </form>
         {shoppingList?.quantity > 0 && <p className="error">Error: Something went wrong with the checkout.</p>}
         {shoppingList?.quantity === 0 && <p className="success">Success! Your order has been placed.</p>}
+        
+        {isCheckedOut && (
         <section className="checkedOut">
           <h1>Receipt</h1>
           <p>Name: {checkoutForm.name}</p>
@@ -88,6 +94,7 @@ export default function CheckoutForm({ shoppingList, isOpen, checkoutForm, setCh
             </span>
         ))}
         </section>
+        )}
         </div>
         </>
       )
